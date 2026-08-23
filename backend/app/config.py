@@ -3,10 +3,14 @@
 from __future__ import annotations
 
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 
-load_dotenv()
+root_env = Path(__file__).resolve().parents[2] / ".env"
+backend_env = Path(__file__).resolve().parents[1] / ".env"
+for env_path in (root_env, backend_env):
+    load_dotenv(env_path)
 
 
 class Config:
