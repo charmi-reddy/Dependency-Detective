@@ -56,7 +56,7 @@ SET t += row.props
 
 MERGE_REL = """
 UNWIND $rows AS row
-MATCH (a {id: row.src}), (b {id: row.dst})
+MATCH (a {{id: row.src}}), (b {{id: row.dst}})
 MERGE (a)-[:{rtype}]->(b)
 """
 
