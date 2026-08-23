@@ -1,0 +1,7 @@
+flask>=3.0
+flask-cors>=4.0
+neo4j>=5.20          # official Neo4j driver - connects to CognoDB over Bolt
+python-dotenv>=1.0
+networkx>=3.2        # demo backend only (offline development without CognoDB)
+gunicorn>=21.2       # production server for deployment
+pytest>=8.0          # tests
